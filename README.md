@@ -1,10 +1,18 @@
-# DeepSeek Harness Mac (deepseekharness-mac)
+# DeepSeek Harness Mac (deepseek-harness-mac)
 
 > **A tiny native macOS shell for DeepSeek Harness — 132KB vs Electron's 142MB+.**
 > 极轻量 macOS 原生壳：Swift + WKWebView，复用你本地的 dsh server，零捆绑。
 
 DeepSeek Harness 官方通过命令行启动本地 Web UI（`npx @deepseek-ai/dsh web` → http://127.0.0.1:3080）。
 本项目给它套一个 **macOS 原生轻壳**：双击即用，自动管理本地 server，窗口即官方 Web UI。
+
+## 下载（解压即用，无需自己打包）
+
+👉 **[DeepSeek Harness Mac v0.1.0](https://github.com/chenaptx/deepseek-harness-mac/releases/tag/v0.1.0)**
+
+- 下载 `DeepSeek-Harness-Mac-0.1.0.zip`（仅 28KB）
+- 解压后双击 `DeepSeek Harness.app` 即用
+- 前置：本机装有 **Node.js ≥ 22**（首次启动会自动通过缓存包 / `npx` 拉起 dsh server，之后秒开）
 
 ## 为什么轻（对比）
 
