@@ -10,6 +10,16 @@ DeepSeek Harness 官方通过命令行启动本地 Web UI（`npx @deepseek-ai/ds
 
 👉 **[DeepSeek Harness Mac v0.1.0](https://github.com/chenaptx/deepseek-harness-mac/releases/tag/v0.1.0)**
 
+**一键安装（推荐，避免"右键→打开"）：**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/chenaptx/deepseek-harness-mac/main/install.sh | bash
+```
+
+脚本自动：检查 Node ≥ 22 → 下载最新 Release → **清除 macOS 隔离属性（解决 Gatekeeper 拦截，双击即开，无需右键）** → 安装到 /Applications → 启动。
+
+手动方式：
+
 - 下载 `DeepSeek-Harness-Mac-0.1.0.zip`（仅 28KB）
 - 解压后双击 `DeepSeek Harness.app` 即用
 - 前置：本机装有 **Node.js ≥ 22**（首次启动会自动通过缓存包 / `npx` 拉起 dsh server，之后秒开）
