@@ -8,7 +8,7 @@ DeepSeek Harness 官方通过命令行启动本地 Web UI（`npx @deepseek-ai/ds
 
 ## 下载（解压即用，无需自己打包）
 
-👉 **[DeepSeek Harness Mac v0.1.0](https://github.com/chenaptx/deepseek-harness-mac/releases/tag/v0.1.0)**
+👉 **[DeepSeek Harness Mac v0.1.1](https://github.com/chenaptx/deepseek-harness-mac/releases/tag/v0.1.1)**
 
 **一键安装（推荐，避免"右键→打开"）：**
 
@@ -20,9 +20,14 @@ curl -fsSL https://raw.githubusercontent.com/chenaptx/deepseek-harness-mac/main/
 
 手动方式：
 
-- 下载 `DeepSeek-Harness-Mac-0.1.0.zip`（仅 28KB）
+- 下载 `DeepSeek-Harness-Mac-0.1.1.zip`（仅 54KB）
 - 解压后双击 `DeepSeek Harness.app` 即用
 - 前置：本机装有 **Node.js ≥ 22**（首次启动会自动通过缓存包 / `npx` 拉起 dsh server，之后秒开）
+
+## 更新日志
+
+- **v0.1.1** — 修复 ⌘C 复制失效：补上 `setupMenu()` 调用，把原生 App/Edit/File 菜单挂到菜单栏（此前菜单从未创建，导致 ⌘C/⌘X/⌘A 无路由；⌘V 因输入框自处理仍可用）
+- **v0.1.0** — 首发：Swift + WKWebView 原生壳、⌘V 粘贴通道、一键安装脚本
 
 ## 为什么轻（对比）
 
@@ -42,7 +47,7 @@ curl -fsSL https://raw.githubusercontent.com/chenaptx/deepseek-harness-mac/main/
 - ✅ **退出弹框**：关闭窗口时选择「关闭 server 并退出 / 保留 server 仅退出 / 取消」，外部 server 永不误杀
 - ✅ **server 日志**：`~/.dsh-desktop/dsh.log`
 - ✅ **卡顿兜底**：菜单栏 File → Open in Browser（⌘O）一键切 Chrome
-- ✅ **复制粘贴可用**：WKWebView 的剪贴板通道在 macOS 有已知平台限制（右键可用、⌘C/⌘V 失效）——本壳通过 **WKWebView 子类拦截 ⌘V + JS 直写 textarea** 解决（支持 React 受控组件）
+- ✅ **复制粘贴可用**：WKWebView 的剪贴板通道在 macOS 有已知平台限制（右键可用、⌘C/⌘V 失效）——本壳通过 **WKWebView 子类拦截 ⌘V + JS 直写 textarea** 解决（支持 React 受控组件）；⌘C 复制依赖原生 Edit 菜单被正确挂到菜单栏（v0.1.1 修复 `setupMenu()` 未调用的遗漏，此前 ⌘V 能用、⌘C 失效）
 
 ## 构建
 

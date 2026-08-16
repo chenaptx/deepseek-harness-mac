@@ -63,6 +63,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         // 确保 WebView 拿到焦点 (复制/粘贴/输入法/听写依赖 first responder)
         window.makeFirstResponder(webView)
         webView.becomeFirstResponder()
+        // 挂主菜单 (App/Edit/File) — ⌘C/⌘V/⌘X/⌘A 依赖 Edit 菜单存在才会路由
+        setupMenu()
 
         if isServerUp() {
             loadUI()          // 复用已在运行的 dsh server
