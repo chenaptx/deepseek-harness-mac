@@ -2,6 +2,3 @@
 dsh-desktop
 DeepSeek Harness.app/
 *.DS_Store
-
-# releases are pushed as GitHub Release assets, not committed to the tree
-DeepSeek-Harness-Mac-*.zip
