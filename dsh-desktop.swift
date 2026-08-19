@@ -50,6 +50,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
           caret-color: currentColor !important;
           opacity: 1 !important;
         }
+        /* 满屏宽度修复: DSH 0.1.0-rc.6 的对话列被 --dsh-chat-content-width:748px 锁死
+           (dsh-client-ui-conversation:6751 定义, Md3f7G_column / bqrRRG_card 用 max-width:var(该变量)).
+           用 !important 覆盖该变量, 窗口拉满时对话列与输入框撑满视口.
+           注: 类名/变量名随 DSH 版本可能变化, 升级 DSH 后需复测. */
+        .wSkVaW_root {
+          --dsh-chat-content-width: 100% !important;
+        }
+        .Md3f7G_column, .bqrRRG_card {
+          box-sizing: border-box !important;
+        }
         """
         let script = WKUserScript(source: css, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
         config.userContentController.addUserScript(script)
