@@ -12,7 +12,7 @@ set -euo pipefail
 APP_NAME="DeepSeek Harness.app"
 DEST="/Applications/${APP_NAME}"
 REPO="chenaptx/deepseek-harness-mac"
-ZIP_URL="https://github.com/${REPO}/releases/latest/download/DeepSeek-Harness-Mac-0.1.1.zip"
+ZIP_URL="https://github.com/${REPO}/releases/latest/download/DeepSeek-Harness-Mac-0.1.2.zip"
 
 echo "◆ DeepSeek Harness Mac 一键安装"
 
