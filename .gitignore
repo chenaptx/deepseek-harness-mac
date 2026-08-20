@@ -2,3 +2,6 @@
 dsh-desktop
 DeepSeek Harness.app/
 *.DS_Store
+
+# don't ignore bin/dsh-desktop (prebuilt binary for plugin distribution)
+!bin/dsh-desktop

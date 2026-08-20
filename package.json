@@ -1,0 +1,30 @@
+{
+  "name": "deepseek-harness-mac",
+  "version": "0.1.2",
+  "description": "Tiny native macOS shell for DeepSeek Harness — 132KB Swift+WKWebView, zero Electron",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib/index.js",
+    "bin/dsh-desktop"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "macos",
+    "desktop",
+    "swift",
+    "wkwebview"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenaptx/deepseek-harness-mac.git"
+  }
+}
